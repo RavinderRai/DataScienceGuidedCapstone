@@ -8,3 +8,10 @@ The problem statement part of this process is to simply get an understanding and
 
 ## Data Wrangling
 
+In this step the data was origanized and cleaned. Starting off with simply exploring the data via histograms, there were noticeable outliers that skewed certain features in the data set. Some of these data points had obviously flawed data (like the Years Open feature), so they were corrected. We also added some population data for the states, found on wikipedia. Ulitimately, the arguably most important thing done in this step was deciding on the target feature that we would use out model to predict. In particular, there were two possible target features, the weekend ticket price and the weekday ticket price. Plotting them against each other, we found that they are fairly correlated, as you can see below.
+
+![Weekend vs Weekday Ticket Prices](https://user-images.githubusercontent.com/41649635/204149826-488d37fb-1c9d-415d-ae10-cd502b6b8db1.jpg)
+
+This plot itself is rather inconclusive, but as it turns out, the ticket prices for weekdays was actually missing more data than the weekend ticket prices, so in the end the weekend ticket prices were chosen.
+
+## Exploratory Data Analysis
