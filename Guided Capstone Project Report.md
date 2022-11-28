@@ -15,3 +15,9 @@ In this step the data was origanized and cleaned. Starting off with simply explo
 This plot itself is rather inconclusive, but as it turns out, the ticket prices for weekdays was actually missing more data than the weekend ticket prices, so in the end the weekend ticket prices were chosen.
 
 ## Exploratory Data Analysis
+
+With the data now organized, it can be explored in detail. Two notable things done in this stage were viewing the top states based on different features in the data, as well as principal component analysis, to find relationships among features. Naturally, when exploring data not everything you do will lead to notable conclusions, and these two things were unfortuneately examples of this. That being said, using a heatmap and histograms, some conclusions were drawn from this stage. Viewing the histograms below, you can see how this led to the observation that the main features that should be used for model prediction later on are the features: `Runs`, `total_chairs`, `vertical_drop` and `fastQuads`.
+
+![EDA Ticket Price Histograms](https://user-images.githubusercontent.com/41649635/204167016-70fed085-5e89-4d88-9405-f163da6e6414.jpg)
+
+
