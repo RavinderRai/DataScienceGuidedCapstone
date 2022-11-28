@@ -28,7 +28,7 @@ Before getting into the models, the accuracy metric to be used was chosen. We we
 
 Finally, we move on to the model selection part. Two models were attempted, namely Linear Regression and Random Forest. In both cases gridsearch was used to find the best hyperparameters. Naturally, they both performed much better than simply predicting the mean, across all evaluation metrics. That being said, with the optimal hyperparameters, the Random Forest algorithm performed better than the Linear Regression model. Using the mean absolute error as an example, the Random Forest model was about half a dollar less than the Linear Regression model, and also had less variance with a standard deviation of about half a dollar less as well. Not only that, but the Random Forest model also proved the assumption before that the most important features would be the `Runs`, `total_chairs`, `vertical_drop` and `fastQuads` features. You can see this in the plot below, where these features are all in the top 5 most important.
 
-![Random Forest Feature Importance](https://user-images.githubusercontent.com/41649635/204174851-e3e96148-22b1-4d24-9045-1ef5e0cd2b1f.jpg)
+![Random Forest Feature Importance](https://user-images.githubusercontent.com/41649635/204175047-a58c1341-e8cb-4fcc-becd-17d7cd817e10.jpg)
 
 ## Pricing Recommendation 
 
