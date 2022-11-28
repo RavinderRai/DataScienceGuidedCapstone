@@ -16,8 +16,22 @@ This plot itself is rather inconclusive, but as it turns out, the ticket prices 
 
 ## Exploratory Data Analysis
 
-With the data now organized, it can be explored in detail. Two notable things done in this stage were viewing the top states based on different features in the data, as well as principal component analysis, to find relationships among features. Naturally, when exploring data not everything you do will lead to notable conclusions, and these two things were unfortuneately examples of this. That being said, using a heatmap and histograms, some conclusions were drawn from this stage. Viewing the histograms below, you can see how this led to the observation that the main features that should be used for model prediction later on are the features: `Runs`, `total_chairs`, `vertical_drop` and `fastQuads`.
+With the data now organized, it can be explored in detail. Two notable things done in this stage were viewing the top states based on different features in the data, as well as principal component analysis, to find relationships among features. Naturally, when exploring data not everything you do will lead to notable conclusions, and these two things were unfortuneately examples of this. That being said, using a heatmap and histograms, some conclusions were drawn from this stage. Viewing the histograms below, you can see how this led to the observation that the main features that should be used for model prediction later on are the features: `Runs`, `total_chairs`, `vertical_drop` and `fastQuads`, as they have the most clear correlations with the Ticket Price feature.
 
 ![EDA Ticket Price Histograms](https://user-images.githubusercontent.com/41649635/204167016-70fed085-5e89-4d88-9405-f163da6e6414.jpg)
+
+## Model Pre-Processing, Algorithms, and Evaluation Metrics
+
+Before training the model, the data needs to be prepared, which is exactly what this stage entails. As is always done in machine learning, the data was first split into training and testing sets. The test size was 0.3, or 30 percent of the data. The only other important pre-processing step done here was that the training set was further split into 5 parts, since we used the cross validation techinique for model testing. The test set was saved for a final test at the end with the chosen model, as is standard practice in this field.
+
+Before getting into the models, the accuracy metric to be used was chosen. We went with three here, namely the r2 score, mean squared error, and mean absolute error. In fact, these were used with a non-model, that simply predicted the mean price given any input, to make sure such a simple model like this was not good enough. Of course, it wasn't, giving an r2 score of 0, and some poor results with the other metrics as well. 
+
+Finally, we move on to the model selection part. Two models were attempted, namely Linear Regression and Random Forest. In both cases gridsearch was used to find the best hyperparameters. Naturally, they both performed much better than simply predicting the mean, across all evaluation metrics. That being said, with the optimal hyperparameters, the Random Forest algorithm performed better than the Linear Regression model. Using the mean absolute error as an example, the Random Forest model was about half a dollar less than the Linear Regression model, and also had less variance with a standard deviation of about half a dollar less as well. Not only that, but the Random Forest model also proved the assumption before that the most important features would be the `Runs`, `total_chairs`, `vertical_drop` and `fastQuads` features. You can see this in the plot below, where these features are all in the top 5 most important.
+
+![Random Forest Feature Importance](https://user-images.githubusercontent.com/41649635/204174851-e3e96148-22b1-4d24-9045-1ef5e0cd2b1f.jpg)
+
+## Pricing Recommendation 
+
+## Conclusion and Future Work
 
 
